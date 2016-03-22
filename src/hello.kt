@@ -2,26 +2,20 @@
  * Created by z0027x3m on 21.03.2016.
  */
 
-data class Customer(val name: String, val email: String)
-
 fun main(args: Array<String>){
-    println("Hello from Kotlin")
+    println("Refactoring Kotlin Edition")
 
-    val current = Customer(name = "Sergio", email = "srsanchez75@yahoo.de")
-    println(current)
+    var customer = Customer("Sanchez")
 
-    val numbers = arrayListOf(1,2,3,4,5,6)
+    customer.addRental(Rental(Movie("Lion King", 2), 2))
 
-    val even = numbers.filter { it % 2 == 0 }
+    customer.addRental(Rental(Movie("Aladdin", 2), 3))
 
-    println("even numbers are $even")
+    customer.addRental(Rental(Movie("Rambo", 0), 3))
 
-    val countriesCities = listOf(Pair("England","London"), Pair("France","Paris"), Pair("Germany","Berlin"))
+    customer.addRental(Rental(Movie("Star Wars Ep. VII", 0), 2))
 
-    for((country, city) in countriesCities){
-        println("Country: $country, City: $city")
-    }
-
+    println(customer.statement())
 
 }
 
