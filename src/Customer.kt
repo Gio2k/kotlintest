@@ -1,7 +1,5 @@
-import java.util.ArrayList
-
 class Customer(val name: String) {
-    private val rentals = ArrayList<Rental>()
+    private val rentals : MutableList<Rental> = mutableListOf()
 
     fun addRental(rental: Rental) {
         rentals.add(rental)
