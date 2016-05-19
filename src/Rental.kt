@@ -1,6 +1,6 @@
 class Rental(val movie: Movie, val daysRented: Int)
 {
-    fun getFrequentRenterPoints()
+    fun getFrequentRenterPoints() : Int
     {
         return 0
     }
